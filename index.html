@@ -1383,7 +1383,7 @@ function showPage(id){
 // SAUVEGARDE — localStorage + Google Sheets sync
 // ══════════════════════════════════════════════
 function getSheetUrl(){
-  try{ return localStorage.getItem('pcconfig_sheet_url')||'https://script.google.com/macros/s/AKfycbz_3WLXBZ5CFGzYakXNm0IYOo42Wq_aUi-xCYghvYoTU3roT3UbvjMJ6IwUiX_U1UOA/exec'; } catch(e){ return ''; }
+  try{ return localStorage.getItem('pcconfig_sheet_url')||''; } catch(e){ return ''; }
 }
 function saveData(){
   // 1. localStorage local
@@ -1401,16 +1401,26 @@ function setSyncStatus(state, msg){
 }
 
 function loadData(){
+  // Charger d'abord le local (source de vérité immédiate)
   try{
     const s=localStorage.getItem('pcconfig_v3_tickets');
-    if(s){ const d=JSON.parse(s); if(Array.isArray(d)&&d.length) tickets=d; }
+    if(s){ const d=JSON.parse(s); if(Array.isArray(d)&&d.length){ tickets=d; renderDashboard(); renderTable(getFiltered()); } }
   } catch(e){}
   const url=getSheetUrl();
   if(!url){ setSyncStatus('local'); return; }
   setSyncStatus('loading');
   fetchFromSheet(url).then(remote=>{
     if(remote&&remote.length){
-      tickets=remote;
+      // Fusionner : pour chaque ticket, garder la version avec l historique le plus long
+      const merged = remote.map(r=>{
+        const local = tickets.find(t=>t.id===r.id);
+        if(!local) return r;
+        // Garder celle avec le plus d historique (la plus à jour)
+        return (local.history||[]).length >= (r.history||[]).length ? local : r;
+      });
+      // Ajouter les tickets locaux pas encore sur le cloud
+      tickets.forEach(t=>{ if(!merged.find(m=>m.id===t.id)) merged.push(t); });
+      tickets=merged;
       try{ localStorage.setItem('pcconfig_v3_tickets',JSON.stringify(tickets)); } catch(e){}
       renderDashboard(); renderTable(getFiltered());
       setSyncStatus('ok');
