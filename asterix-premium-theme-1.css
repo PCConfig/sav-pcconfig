@@ -1,0 +1,23 @@
+/* PREMIUM 2026 · local-first, no CDN or external fonts */
+:root{--shadow:0 10px 38px rgba(21,38,55,.08)}
+body{background:#eae6df}
+.wrap{background:#f8f7f4}
+.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 94% -22%,rgba(230,180,95,.32),transparent 40%),radial-gradient(ellipse at 10% 105%,rgba(102,153,160,.18),transparent 60%),linear-gradient(125deg,#112b44,#24415a 68%,#34485a);box-shadow:0 14px 30px rgba(33,48,66,.12);padding-bottom:26px}
+.hero:before{content:"✦";position:absolute;right:18px;top:18px;font-size:92px;color:#ffffff0a;transform:rotate(18deg);pointer-events:none}
+.hero h1{font-size:clamp(31px,7vw,43px);line-height:1.08;letter-spacing:-1.15px}
+.stat{background:#ffffff12;backdrop-filter:blur(4px);border:1px solid #ffffff24}
+.panel{box-shadow:0 3px 22px rgba(23,38,49,.035);border-color:#ebe8e2}
+.h2{letter-spacing:-.45px}
+.audience{display:flex;align-items:center;gap:9px;justify-content:space-between;padding:12px 13px;border:1px solid #e4e0d9;border-radius:16px;background:#fff;margin:11px 0;box-shadow:0 4px 14px #132d4410}
+.audience-label{font-size:11px;color:#697483;font-weight:800;letter-spacing:.3px;flex:1}
+.audience-options{display:flex;gap:4px;padding:4px;border-radius:12px;background:#f0eeea}
+.audience-options button{border:0;background:transparent;color:#5b6874;font-size:12px;font-weight:750;padding:9px 12px;white-space:nowrap;border-radius:9px;transition:.16s ease;min-height:38px}
+.audience-options button.active{background:#1c354a;color:white;box-shadow:0 2px 8px #0e2e4240}
+.audience-options button:focus-visible,.btn:focus-visible,.actions button:focus-visible{outline:3px solid #e3a35c;outline-offset:2px}
+.day-summary{display:grid;grid-template-columns:1.08fr .92fr;gap:10px;margin:15px 0 12px}
+.summary-tile{border:1px solid #e2e0d9;border-radius:18px;background:linear-gradient(138deg,#fff,#f1f4f3);padding:14px;min-width:0;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.summary-tile.next{border-color:#bfd7ce;background:linear-gradient(130deg,#eff6f3,#fff 70%)}
+.summary-tile.meal{background:linear-gradient(135deg,#fff5e8,#fffcf8 85%);border-color:#f0dbbf}
+.summary-tile:before{content:"";position:absolute;width:100px;height:100px;border:18px solid #0b6f5820;border-radius:50%;right:-62px;top:-48px}
+.summary-tile.meal:before{border-color:#d29a4c1c}
+.summary-label{display:flex;align-items:center;gap:4px;font-size:10px;font-weight:850;text-transform:uppercase;letter-spacing:.65px;color:#697a79;position:relative}
