@@ -1,0 +1,13 @@
+
+#rideList .item .ride-glyph{font-size:21px;flex:0 0 28px}
+#rideList .item h3{font-size:14px}
+.map-legend{display:flex;gap:7px;flex-wrap:wrap;padding:10px 5px;font-size:11px;line-height:1.5;color:#5c6876}
+.map-legend .legend-chip{display:flex;align-items:center;gap:5px;background:#fff;border:1px solid #ede3d9;border-radius:20px;padding:5px 8px}
+.map-legend .legend-circle{width:9px;height:9px;border-radius:50%;display:inline-block;background:var(--z)}
+.mapZone circle{fill:var(--zsoft,#fff9e6);stroke:var(--z,#ca9262)}
+.mapZone.active circle{fill:var(--z,#cd5c3d);stroke:#fff;stroke-width:4}
+.mapZone.active text{fill:#fff}
+@media(max-width:370px){.audience-label{font-size:10px}.audience-options button{padding:8px}.day-summary{gap:7px}.summary-tile{padding:11px}.summary-name{font-size:14px}.step{grid-template-columns:60px minmax(0,1fr) 30px;gap:7px;padding:12px 8px}.step .time{width:60px}.step .step-art{right:2px;width:98px;opacity:.23}.step .planlink{font-size:9px}}
+@media(min-width:650px){.step{grid-template-columns:85px minmax(0,1fr) 40px;padding:18px}.step .time,.step .time-label{width:78px}.step-art{right:35px;width:145px;height:135px}.step .title{font-size:17px}.day-summary{gap:16px}.summary-name{font-size:19px}.summary-tile{padding:19px}.audience{padding:14px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
