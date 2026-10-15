@@ -1,0 +1,29 @@
+
+.step .title{font-size:15px;line-height:1.25;max-width:100%;overflow-wrap:anywhere;color:#162e40;font-weight:850}
+.zoneTag{display:inline-flex;align-items:center;font-size:10px;font-weight:750;max-width:100%;padding:4px 8px;border:1px solid color-mix(in srgb,var(--z) 21%,white);background:var(--zsoft);color:var(--z);border-radius:99px;margin:7px 0 3px}
+.step .sub{line-height:1.35;font-size:11px;color:#5d6874;max-width:100%}
+.step .plan-cta{gap:6px;margin-top:8px}
+.step .planlink{font-size:10px;padding:7px 8px;border-color:#e3ddd5;background:#ffffffd9}
+.step .actions button{width:32px;height:31px;min-height:31px;border-radius:9px;background:#fff;box-shadow:0 1px 3px #1c303b13}
+.step .actions button.tick{background:#eaf5f1;color:#2b806c;font-size:18px;font-weight:900}
+.step.done{background:#f2f4f1;opacity:.73;box-shadow:none}
+.step.done .title{text-decoration:line-through;opacity:.68}
+.step .smallinput{background:#fff9;max-width:43px}
+.level-pill{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:750;color:#365b59;background:#fff8;border:1px solid #cdd9d2;border-radius:999px;padding:4px 8px;white-space:nowrap}
+.step-kid{grid-template-columns:60px minmax(0,1fr);gap:11px;min-height:137px;align-items:center;padding-right:12px}
+.step-kid .title{font-size:17px}
+.step-kid .step-art{width:140px;height:135px;right:0;top:0;opacity:.33}
+.step-kid .kids-message{font-size:12px;color:#435b66;font-weight:700;margin:8px 0;line-height:1.3}
+.step-kid .kid-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:8px}
+.step-kid .kid-done{background:#1c6759;color:#fff;border:0;padding:10px 12px;font-size:12px;font-weight:850;border-radius:11px;min-height:42px}
+.step-kid.done .kid-done{background:#c0d3c9;color:#26594c}
+.step-kid .kid-plan{background:#fff9;border:1px solid #e2dfd6;color:#2b4c60;font-size:11px;min-height:42px;border-radius:10px;padding:8px}
+.kid-mode-title{margin:14px 0 6px;color:#40637e;font-weight:780;font-size:12px}
+.day-tools{margin:15px 0;display:flex;gap:7px;flex-wrap:wrap}
+.audience-kids .day-tools{display:none}
+.audience-kids .alert{display:none}
+.kid-hint{display:none;font-size:12px;color:#546a73;background:#eaf5f0;border-radius:12px;padding:12px 13px;margin:12px 0}
+.audience-kids .kid-hint{display:block}
+.audience-kids .seg button{font-size:11px}
+.audience-kids .step-art{opacity:.27}
+#rideList .item{border-left:3px solid var(--z,#d5dbdb);background:linear-gradient(90deg,#fff,var(--zsoft,#f9f9f7));padding:12px 8px 12px 12px;border-bottom:1px solid #f0efed;border-radius:8px;margin:6px 0;gap:8px}
